@@ -15,6 +15,13 @@
 # limitations under the License.
 #
 
+# Remove duplicated genfscon rules
+sed -i "/genfscon exfat/d" /system/etc/selinux/plat_sepolicy.cil
+sed -i "/genfscon fuseblk/d" /system/etc/selinux/plat_sepolicy.cil
+
+# Fix logd service definition
+sed -i "s/socket logdw dgram+passcred 0222 logd logd/socket logdw dgram 0222 logd logd/g" /system/etc/init/logd.rc
+
 if [ "$(cat /proc/device-tree/hisi,product_name)" = "LLD-L31" ]; then
     # Keep NFC
     echo 0
