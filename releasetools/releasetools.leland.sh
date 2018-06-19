@@ -22,6 +22,10 @@ sed -i "/genfscon fuseblk/d" /system/etc/selinux/plat_sepolicy.cil
 # Fix logd service definition
 sed -i "s/socket logdw dgram+passcred 0222 logd logd/socket logdw dgram 0222 logd logd/g" /system/etc/init/logd.rc
 
+# Disable parsing intra-refresh-mode parameter in libstagefright
+sed -i 's/intra-refresh-mode/intra-refresh-nope/' /system/lib64/libstagefright.so
+sed -i 's/intra-refresh-mode/intra-refresh-nope/' /system/lib/libstagefright.so
+
 if [ "$(cat /proc/device-tree/hisi,product_name)" = "LLD-L31" ]; then
     # Keep NFC
     echo 0
