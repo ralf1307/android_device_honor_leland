@@ -17,6 +17,13 @@
 
 set -e
 
+# Required!
+export DEVICE=berkeley
+export DEVICE_COMMON=kirin970-common
+export VENDOR=huawei
+
+export INITIAL_COPYRIGHT_YEAR=2018
+
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi

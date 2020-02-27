@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-VENDOR_PATH := device/huawei/kirin970-common
+DEVICE_PATH := device/huawei/berkeley
 
 # Architecture
 TARGET_ARCH := arm64
@@ -30,6 +30,9 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
 TARGET_USES_64_BIT_BINDER := true
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := berkeley,kirin970
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
