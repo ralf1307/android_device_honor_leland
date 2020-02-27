@@ -18,9 +18,8 @@
 set -e
 
 # Required!
-export DEVICE=berkeley
-export DEVICE_COMMON=kirin970-common
-export VENDOR=huawei
+export DEVICE=leland
+export VENDOR=honor
 
 export INITIAL_COPYRIGHT_YEAR=2018
 
@@ -38,10 +37,10 @@ fi
 . "$HELPER"
 
 # Initialize the helper for common
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
+setup_vendor "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and guards
-write_headers "berkeley charlotte"
+write_headers "leland"
 
 # The standard common blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt true

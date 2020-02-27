@@ -16,6 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter berkeley charlotte,$(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE),leland)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif

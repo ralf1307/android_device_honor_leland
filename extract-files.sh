@@ -18,9 +18,8 @@
 set -e
 
 # Required!
-export DEVICE=berkeley
-export DEVICE_COMMON=kirin970-common
-export VENDOR=huawei
+export DEVICE=leland
+export VENDOR=honor
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -57,7 +56,7 @@ if [ -z "$SRC" ]; then
 fi
 
 # Initialize the helper for common device
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true "$CLEAN_VENDOR"
+setup_vendor "$VENDOR" "$LINEAGE_ROOT" true "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 

@@ -17,8 +17,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/huawei/berkeley/berkeley-vendor.mk)
-$(call inherit-product, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
+$(call inherit-product, vendor/honor/leland/leland-vendor.mk)
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -50,7 +49,7 @@ PRODUCT_PACKAGES += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    init.kirin970.rc
+    init.hi6250.rc
 
 # Display
 PRODUCT_PACKAGES += \
@@ -62,7 +61,7 @@ PRODUCT_COPY_FILES += \
 
 # LineageHw
 PRODUCT_PACKAGES += \
-    lineage.touch@1.0-service.kirin970
+    lineage.touch@1.0-service.hi6250
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -77,7 +76,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
-    $(LOCAL_PATH)/permissions/privapp-permissions_kirin970.xml:system/etc/permissions/privapp-permissions_kirin970.xml
+    $(LOCAL_PATH)/permissions/privapp-permissions_hi6250.xml:system/etc/permissions/privapp-permissions_hi6250.xml
 
 # Radio
 PRODUCT_PACKAGES += \
